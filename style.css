@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.dark {
+  background-color: rgb(89, 82, 82);
+}
+.light{
+  background-color: rgb(255, 255, 255);
+}
+.dark header{
+  background-color: white;
+  /* color: #595252; */
+
+}
+.dark header div{
+    color: #595252;
+
+}
+
+header {
+  background-color: rgb(69, 65, 65);
+  width: 100%;
+  height: 60px;
+}
+header div {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+#heading {
+  margin-left: 30px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+#quote {
+  margin-right: 30px;
+  margin-top: 15px;
+  /* text-decoration: line-through; */
+}
+#inputForm {
+  height: 70px;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(69, 65, 65);
+  /* position: fixed; */
+  margin-top: 40px;
+  /* border-top-left-radius: 50px; */
+  border-top-right-radius: 40px;
+  border: 3px solid Grey;
+  /* border-bottom: none; */
+
+  /* border-left: none; */
+}
+
+#list {
+  margin-top: 10px;
+  overflow-y: scroll;
+  max-width: 55%;
+  max-height: 350px;
+  min-height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  border-bottom-left-radius: 40px;
+  border: 3px solid Grey;
+  border-right: none;
+  line-height: 40px;
+  font-size: 17px;
+  background-color: rgb(109, 102, 102);
+}
+#list::-webkit-scrollbar {
+  width: 5px;
+}
+#list::-webkit-scrollbar-track {
+  background-color: rgb(69, 65, 65);
+}
+#list::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+#input {
+  width: 70%;
+  height: 30px;
+  padding-left: 5px;
+  margin-left: 7%;
+  margin-top: 20px;
+  border-radius: 50px;
+  text-align: center;
+  border: none;
+  font-size: 17px;
+  /* align-items: center; */
+}
+
+#addBtn {
+  border-radius: 50px;
+  height: 30px;
+  width: 15%;
+  border: none;
+  font-size: 17px;
+  background-color: white;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  /* transition: tranform 2s; */
+}
+#addBtn:hover {
+  background-color: transparent;
+  color: white;
+}
+#addBtn:active {
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+}
+.del-btn{
+    /* border-radius: 10px; */
+    /* padding: 5px 7px 5px 7px ;     */
+    /* border: none; */
+    float:right;
+    display: inline ;
+    /* background-color: rgb(69, 65, 65); */
+    /* color: white; */
+    cursor: pointer;
+    /* margin-left: 10px; */
+    /* text-align: center; */
+    /* content: ""; */
+    margin-top: 7px;
+    /* background-image: url(./delete.png); */
+    /* width: 200px; */
+    /* background-size: 2px; */
+    position: relative;
+
+
+}
+.del-btn img{
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+  object-fit: cover;
+  position: absolute;
+
+}
+
+
+.addedText{
+  /* max-width: 400px; */
+  /* border: 2px solid black; */
+  word-wrap: break-word;
+  overflow-wrap: break-word; 
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(255, 255, 255);
+  /* line-height: 30px; */
+  /* font-weight: 500; */
+}
+.addedText::first-letter{
+  text-transform: capitalize;
+
+}
+#themeDiv{
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+  /* float: right; */
+  position: relative;
+  margin-right: 10px;
+
+
+}
+
+
+#checkbox{
+  background-color: gray;
+  width: 50px;
+  height: 25px;
+  position: absolute;
+  border-radius: 30px;
+  transition: 0.3s;
+  cursor:pointer;
+
+}
+
+#checkbox::before{
+  width: 25px;
+  height: 20px; 
+  border-radius: 30px;
+  position: absolute; 
+  content: "";
+  margin: 2.5px;
+  transition: 0.3s;
+  background-color: rgb(69, 65, 65);
+
+
+}
+#list li{
+  border-bottom: 2px solid #454141;
+
+}
+
+
+#theme:checked + #checkbox::before {
+  transform: translateX(22px);
+  background-color: rgb(255, 255, 255);
+
+}
+#theme{
+  display: none;
+}
+
+
+
+@media (min-width:425px) and (max-width:768px){
+  #quote{
+    display: none;
+  }
+  header div{
+    justify-content: center;
+  }
+  
+
+  #list{
+    max-width: 70%;
+    height: 300px;
+    
+  }
+  #inputForm{
+    width: 70%;
+  }
+  .del-btn{
+    margin-top: 6px;
+    }
+}
+
+
+@media (max-width:425px) {
+  #quote{
+    display: none;
+  }
+  header div{
+    justify-content: center;
+  }
+  #list{
+    max-width: 80%;
+    height: 300px;
+  }
+ 
+  #inputForm{
+    width: 80%;
+    border-radius: 0;
+
+  }
+  #input{
+    width: 70%;
+    margin-left: 12px;
+  }
+  #addBtn{
+    width: 50px;
+
+  }
+  .del-btn{
+    margin-top: 6px;
+    }
+  
+}

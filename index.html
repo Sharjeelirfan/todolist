@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark">
+    <header>
+      <div>
+        <h1 id="heading">TODO LIST</h1>
+        <h2 id="quote">JUST DO IT</h2>
+      </div>
+    </header>
+    <div id="themeDiv">
+      <input type="checkbox" id="theme" />
+      <label for="theme" id="checkbox"></label>
+    </div>
+
+    <div id="bodyDiv">
+      
+      <div id="formDiv">
+        <div id="inputForm">
+          <form action="" id="todoForm">
+            <input
+              type="text"
+              id="input"
+              placeholder="Enter Your Task"
+              maxlength="200"
+            />
+            <button type="submit" id="addBtn">ADD</button>
+          </form>
+        </div>
+
+        <div id="list">
+          <ul id="todoList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
